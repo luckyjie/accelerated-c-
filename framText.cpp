@@ -5,7 +5,7 @@
 
 using namespace std;
 
-//计算边框长度
+//璁＄畻杈规闀垮害
 string::size_type width(const vector<string>& v)
 {
 	string::size_type maxlen = 0;
@@ -14,7 +14,7 @@ string::size_type width(const vector<string>& v)
 	return maxlen;
 }
 
-//给文字加边框
+//缁欐枃瀛楀姞杈规
 vector<string> frame(const vector<string>& v)
 {
 	vector<string> ret;
@@ -29,7 +29,7 @@ vector<string> frame(const vector<string>& v)
 	return ret;
 }
 
-//垂直联接
+//鍨傜洿鑱旀帴
 vector<string> vcat(const vector<string>& top, const vector<string>& bottom)
 {
 	vector<string> ret = top;
@@ -39,7 +39,7 @@ vector<string> vcat(const vector<string>& top, const vector<string>& bottom)
 	return ret;
 }
 
-//水平联接
+//姘村钩鑱旀帴
 vector<string> hcat(const vector<string>& left, const vector<string>& right)
 {
 	vector<string> ret;	
@@ -59,7 +59,7 @@ vector<string> hcat(const vector<string>& left, const vector<string>& right)
 	return ret;	
 }
 
-//输出显示
+//杈撳嚭鏄剧ず
 void display(vector<string>& hn)
 {
 	for (vector<string>::size_type i = 0; i != hn.size(); i ++)
@@ -77,14 +77,21 @@ int main(void)
 	}
 
 	fram = frame(info);
+
 	vfram = vcat(info, fram);
 	hfram = hcat(info, fram);
 
+	cout << "鏂囨湰鍔犳"<< endl;
 	display(fram);
 	cout << endl;
+	
+	cout << "鍨傜洿鑱旀帴"<< endl;
 	display(vfram);
 	cout << endl;
+
+	cout << "姘村钩鑱旀帴"<< endl;
 	display(hfram);
 	cout << endl;	
+
 	return 0;
 }
